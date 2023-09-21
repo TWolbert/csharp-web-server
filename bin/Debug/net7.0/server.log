@@ -1,0 +1,136 @@
+Request headers:
+sec-ch-ua: "Microsoft Edge";v="117", "Not;A=Brand";v="8", "Chromium";v="117"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+DNT: 1
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Cache-Control: max-age=0
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en;q=0.9,en-US;q=0.8,nl;q=0.7
+Host: localhost:4201
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.36
+
+Request body:
+
+Request headers:
+sec-ch-ua: "Microsoft Edge";v="117", "Not;A=Brand";v="8", "Chromium";v="117"
+DNT: 1
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Connection: keep-alive
+Accept: image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en;q=0.9,en-US;q=0.8,nl;q=0.7
+Host: localhost:4201
+Referer: http://localhost:4201/login
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.36
+
+Request body:
+
+Request headers:
+sec-ch-ua: "Microsoft Edge";v="117", "Not;A=Brand";v="8", "Chromium";v="117"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+DNT: 1
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en;q=0.9,en-US;q=0.8,nl;q=0.7
+Host: localhost:4201
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.36
+
+Request body:
+
+Response:
+Invalid request method. "GET"
+Full request details:
+ sec-ch-ua: "Microsoft Edge";v="117", "Not;A=Brand";v="8", "Chromium";v="117"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+DNT: 1
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en;q=0.9,en-US;q=0.8,nl;q=0.7
+Host: localhost:4201
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.36
+
+
+ System.String[]
+ Input stream:
+ System.IO.Stream+NullStreamRequest headers:
+sec-ch-ua: "Microsoft Edge";v="117", "Not;A=Brand";v="8", "Chromium";v="117"
+DNT: 1
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Connection: keep-alive
+Accept: image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en;q=0.9,en-US;q=0.8,nl;q=0.7
+Host: localhost:4201
+Referer: http://localhost:4201/login
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.36
+
+Request body:
+
+Response:
+Invalid endpoint.Request headers:
+Postman-Token: d382746a-e12c-405f-a655-989824f8a8bb
+Cache-Control: no-cache
+Connection: keep-alive
+Content-Length: 288
+Content-Type: multipart/form-data; boundary=--------------------------777511219261335255315490
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Host: localhost:4201
+User-Agent: PostmanRuntime/7.33.0
+
+Request body:
+----------------------------777511219261335255315490
+Content-Disposition: form-data; name="username"
+
+aaaaaaaaa
+----------------------------777511219261335255315490
+Content-Disposition: form-data; name="password"
+
+aaaaaaaaa
+----------------------------777511219261335255315490--
+
+Response:
+Invalid username, password or request formattingRequest headers:
+Postman-Token: 786e729b-9fcf-44a7-946f-bcf6fada871a
+Cache-Control: no-cache
+Connection: keep-alive
+Content-Length: 288
+Content-Type: multipart/form-data; boundary=--------------------------563634715866400493120378
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Host: localhost:4201
+User-Agent: PostmanRuntime/7.33.0
+
+Request body:
+
+Response:
+User was created!
