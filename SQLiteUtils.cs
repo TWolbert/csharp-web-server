@@ -69,16 +69,16 @@ namespace C__webserver
 
                     if (result == 0)
                     {
-                        return "Something went wrong";
+                        return "500Something went wrong";
                     }
                     else
                     {
-                        return "User added!";
+                        return "200User added!";
                     }
                 }
                 else
                 {
-                    return "Username already exists";
+                    return "409Username already exists";
                 }
                 
             }
@@ -86,7 +86,7 @@ namespace C__webserver
             {
                 // Handle exceptions
                 Console.WriteLine("Error: " + ex.Message);
-                return "Something went wrong";
+                return "500Something went wrong";
             }
         }
         
@@ -106,16 +106,16 @@ namespace C__webserver
 
             if (string.IsNullOrEmpty(passHash))
             {
-                return "User doesn't exist!";
+                return "404User doesn't exist!";
             }
 
             if (verifyPassword(password, passHash))
             {
-                return "Login successful!";
+                return "200Login successful!";
             }
             else
             {
-                return "Password incorrect";
+                return "401Password incorrect";
             }
         }
         

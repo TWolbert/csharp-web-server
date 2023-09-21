@@ -5,8 +5,13 @@ namespace C__webserver
 {
     internal class Program
     {
+        public static string endpoint = "";
         static void Main(string[] args)
         {
+            if (File.Exists("./prod.txt"))
+                endpoint = "http://+:4201/";
+            else
+                endpoint = "http://localhost:4201/";
             SQLiteUtils.init();
             Console.WriteLine("Database created");
 
@@ -15,7 +20,7 @@ namespace C__webserver
 
         static async Task Start(string[] args)
         {
-            string[] prefixes = { "http://localhost:4201/" };  // Replace with your desired server address
+            string[] prefixes = { endpoint };  // Replace with your desired server address
 
             HttpListener listener = new HttpListener();
             foreach (string prefix in prefixes)
@@ -101,10 +106,13 @@ namespace C__webserver
                 stringBuilder.Append(await reader.ReadToEndAsync());
             }
             stringBuilder.Append("\n");
+            // status code is first three chars of response string
+            response.StatusCode = int.Parse(responseString.Substring(0, 3));
+            responseString = responseString.Substring(3);
             stringBuilder.Append("Response:\n");
             stringBuilder.Append(responseString);
             _ = Task.Run(() => addToLog(stringBuilder.ToString()));
-            
+
             byte[] buffer = Encoding.UTF8.GetBytes(responseString);
             response.ContentLength64 = buffer.Length;
 
@@ -145,7 +153,7 @@ namespace C__webserver
                 }
                 if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
                 {
-                    return "Invalid username, password or request formatting";
+                    return "401Invalid username, password or request formatting";
                 }
                 else
                 {
@@ -154,7 +162,7 @@ namespace C__webserver
             }
             catch
             {
-                return "huh??";
+                return "500huh??";
             }
         }
         private static async Task<string> handleRegister(HttpListenerRequest request)
@@ -185,7 +193,7 @@ namespace C__webserver
                 }
                 if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
                 {
-                    return "Invalid username, password or request formatting";
+                    return "401Invalid username, password or request formatting";
                 }
                 else
                 {
@@ -200,13 +208,13 @@ namespace C__webserver
                     }
                     else
                     {
-                        return "User was created!";
+                        return "200User was created!";
                     }
                 }
             }
             catch
             {
-                return "huh??";
+                return "500huh??";
             }
         }
     }
